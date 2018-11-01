@@ -1,6 +1,7 @@
 package com.desire;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 
 /**
@@ -54,7 +55,7 @@ public interface ConcordanceDataManagerInterface {
      * @return true if the concordance file was created successfully.
      * @throws FileNotFoundException if file not found
      */
-    public boolean createConcordanceFile(File input, File output) throws FileNotFoundException;
+    public boolean createConcordanceFile(File input, File output) throws FileNotFoundException, IOException;
 
 } // end class Concordance
 

@@ -8,7 +8,8 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 /**
  * This is the test file for the ConcordanceDataManager
@@ -54,11 +55,6 @@ public class ConcordanceDataStructureTest {
         //cucumber should also be stored at index 10
         assertEquals("cucumber", testStructure.getWords(10).get(1));
         assertEquals(2, testStructure.getPageNumbers(10).get(1).get(0), .001);
-    }
-
-    @Test
-    public void testAddSTUDENT() {
-        fail("This test is not yet implemented");
     }
 
     /**
@@ -125,6 +121,7 @@ public class ConcordanceDataStructureTest {
         testStructure.add("carrot", 2);
         testStructure.add("apple", 3);
         array = testStructure.showAll();
+        System.out.println(array);
         assertTrue(array.get(0).contains("apple: 3"));
         assertTrue(array.get(1).contains("banana: 1"));
         assertTrue(array.get(2).contains("carrot: 2"));
